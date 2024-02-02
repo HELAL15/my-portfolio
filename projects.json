@@ -1,0 +1,104 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "orcas",
+      "image": "images/projects/ocras.png",
+      "description": "orcas is a website for a company that provides marketing services for the companies who need marketing services",
+      "links": {
+        "github": "https://github.com/HELAL15/ORCAS",
+        "website": "https://hellal.me/ORCAS/"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Craches-FIX",
+      "image": "/images/projects/Craches-FIX.png",
+      "description": "Website provides You have a workforce specialized in everything related to maintenance and repair",
+      "links": {
+        "github": "https://github.com/HELAL15/Craches-FIX/",
+        "website": "https://hellal.me/Craches-FIX/"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Valet-Parking",
+      "image": "/images/projects/valet-parking.png",
+      "description": "website that provides parking services",
+      "links": {
+        "github": "https://github.com/HELAL15/Valet-Parking",
+        "website": "https://hellal.me/Valet-Parking/"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Maqalat.M",
+      "image": "/images/projects/maqalat.png",
+      "description": "website for publish posts and articles for writers and poets",
+      "links": {
+        "github": "https://github.com/HELAL15/Maqalat.M",
+        "website": "https://hellal.me/Maqalat.M/"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Rajaa-Faidah",
+      "image": "/images/projects/rajaa-faidah.png",
+      "description": "personal website for a writer and a poet",
+      "links": {
+        "github": "https://github.com/HELAL15/Rajaa-Faidah",
+        "website": "https://hellal.me/Rajaa-Faidah/"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Dashboard",
+      "image": "/images/projects/dashboard.png",
+      "description": "Dashboard for managing",
+      "links": {
+        "github": "https://github.com/HELAL15/Dashboard",
+        "website": "https://hellal.me/Dashboard/"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Jungle House",
+      "image": "/images/projects/jungle.png",
+      "description": "website for tourist services in the jungle",
+      "links": {
+        "github": "https://github.com/HELAL15/Jungle-House-Website",
+        "website": "https://hellal.me/Jungle-House-Website/"
+      }
+    },
+    {
+      "id": 8,
+      "name": "low firms",
+      "image": "/images/projects/low-firms.png",
+      "description": "website for company provides a low services for ohter organizations",
+      "links": {
+        "github": "https://github.com/HELAL15/lawyer-website",
+        "website": "https://hellal.me/lawyer-website/"
+      }
+    },
+    {
+      "id": 9,
+      "name": "space tourism",
+      "image": "/images/projects/space-tourism.png",
+      "description": "A space tourism website offering information about space and spaceships",
+      "links": {
+        "github": "https://github.com/HELAL15/space-tourism-website",
+        "website": "https://hellal.me/space-tourism-website/"
+      }
+    },
+    {
+      "id": 10,
+      "name": "craftsMen",
+      "image": "/images/projects/craftsMen.png",
+      "description": "Website provides You have a workforce specialized in everything related to maintenance and repair",
+      "links": {
+        "github": "https://github.com/HELAL15/craftsMen",
+        "website": "https://hellal.me/craftsMen/"
+      }
+    }
+  ]
+}
