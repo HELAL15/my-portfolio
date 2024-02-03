@@ -4,7 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Portfolio">
+  <meta property="og:description" content="My Portfolio which show my information about myself and my skills">
+  <meta property="og:image" content="/images/logo.png">
+  <meta property="og:url" content="https://helal15.github.io/my-portfolio/">
+  <meta property="og:type" content="website">
   <title>Ahmed Helal</title>
+
+  <!-- fav icon -->
+  <link rel="icon" type="image/png" sizes="65x65" href="images/favicon.png">
 
   <!-- font awesome cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -19,7 +28,9 @@
 </head>
 
 <body>
-
+  <div id="loader">
+    <div class="loader"></div>
+  </div>
   <header>
     <div id="particles-js"></div>
     <div class="landing">
@@ -39,6 +50,7 @@
         <div class="nav">
           <a href="#my_experties">about me</a>
           <a href="#projects">projects</a>
+          <a id="cvLink" href="cv/Ahmed-Helal-CV.pdf" download="CV.pdf">Download CV</a>
         </div>
       </div>
     </div>
@@ -106,6 +118,62 @@
     </div>
   </section>
 
+  <section class="contact_me">
+    <div class="container">
+      <div class="row gy-4 align-items-center flex-wrap-reverse">
+        <div class="col-md-6 wow bounceInLeft">
+          <form action="" class="form" id="form">
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="first_name">First Name</label>
+                  <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"
+                    required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email_id" name="email_id" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" rows="8" id="message" name="message" placeholder="Message"
+                    required></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" class="btn main-btn" id="send_button">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 wow bounceInRight">
+          <div class="sec-title">
+            <h2>contact me</h2>
+            <p>Let's discuss your next project! I'm here to transform your ideas into a stunning digital reality.
+              Contact me today and let's build a unique and unforgettable experience together.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
   <footer id="footer">
     <div class="container">
       <div class="content">
@@ -123,8 +191,12 @@
   <script src="js/plugins/wow.min.js"></script>
   <!-- particles script -->
   <script src="js/plugins/particles.min.js"></script>
+  <!-- emailjs cdn -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <!-- main script -->
   <script src="js/script.js"></script>
+
+
 
 </body>
 

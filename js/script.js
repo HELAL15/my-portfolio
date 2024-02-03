@@ -130,13 +130,11 @@ particlesJS('particles-js',
 
 let projectsContainer = document.getElementById('projects_container');
 
-fetch('../projects.json')
+fetch('https://raw.githubusercontent.com/HELAL15/my-portfolio/master/projects.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data.projects);
 
     data.projects.map((project) => {
-      console.log(project);
 
       // Create a new project element
       let projectElement = document.createElement('div');
@@ -166,11 +164,13 @@ fetch('../projects.json')
       // Append the project element to the container
       projectsContainer.appendChild(projectElement);
     });
+
     let projectElements = document.querySelectorAll('#projects_container .project .row');
-    let projects = document.querySelectorAll('#projects_container .project ');
+    let projects = document.querySelectorAll('#projects_container .project');
+    
     for (let i = 0; i < projectElements.length; i++) {
       let row = projectElements[i];
-      let project = projects[i]
+      let project = projects[i];
       i % 2 === 0 ? (row.style.direction = 'rtl') : (row.style.direction = 'ltr');
       i % 2 === 0 ? (project.classList.add('fadeInUp')) : (project.classList.add('fadeInDown'));
     }
@@ -179,6 +179,49 @@ fetch('../projects.json')
 
 
 
-  $('#loading').fadeOut(500);
+
+
+  
+  
+    const btn = document.getElementById('send_button');
+
+    
+    document.getElementById('form').addEventListener('submit', function (event) {
+      event.preventDefault();
+    
+      btn.innerText = 'Sending...';
+    
+      const serviceID = 'default_service';
+      const templateID = 'template_6tglvhp';
+
+    
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.innerText = 'Send message';
+            alert('Message sent successfully!');
+          }, (err) => {
+            btn.innerText = 'Send message';
+            alert(JSON.stringify(err));
+          });
+      
+    });
+    
+    
+    
+    emailjs.init('vDYhwaw47FS4oc-yC')
+    
+    
+    
+
+
+
+
+
+
+
+
+
+  $('#loader').fadeOut(1000);
 
   new WOW().init();
