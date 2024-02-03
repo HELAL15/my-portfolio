@@ -130,7 +130,7 @@ particlesJS('particles-js',
 
 let projectsContainer = document.getElementById('projects_container');
 
-fetch('/projects.json')
+fetch('../projects.json')
   .then(response => response.json())
   .then(data => {
     console.log(data.projects);
@@ -140,14 +140,14 @@ fetch('/projects.json')
 
       // Create a new project element
       let projectElement = document.createElement('div');
-      projectElement.className = 'project';
+      projectElement.className = 'project wow';
       projectElement.innerHTML = `
-        <div class="row gy-3 align-items-center">
-          <div class="col-md-8">
+        <div class="row gy-3 align-items-center justify-content-center">
+          <div class="col-md-5 col-text">
             <div class="details">
               <div class="about">
-                <h3>${project.name}</h3>
-                <p>${project.description}</p>
+                <h3 class='name'>${project.name}</h3>
+                <p class='desc'>${project.description}</p>
               </div>
               <div class="links">
                 <a href="${project.links.website}" class="btn main-btn" target="_blank">visit website</a>
@@ -155,7 +155,7 @@ fetch('/projects.json')
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-5 col-img">
             <div class="project_img">
               <img src="${project.image}" alt="${project.name}">
             </div>
@@ -167,13 +167,18 @@ fetch('/projects.json')
       projectsContainer.appendChild(projectElement);
     });
     let projectElements = document.querySelectorAll('#projects_container .project .row');
-
+    let projects = document.querySelectorAll('#projects_container .project ');
     for (let i = 0; i < projectElements.length; i++) {
       let row = projectElements[i];
+      let project = projects[i]
       i % 2 === 0 ? (row.style.direction = 'rtl') : (row.style.direction = 'ltr');
+      i % 2 === 0 ? (project.classList.add('fadeInUp')) : (project.classList.add('fadeInDown'));
     }
   })
   .catch(error => console.error('Error fetching data:', error));
 
 
 
+  $('#loading').fadeOut(500);
+
+  new WOW().init();

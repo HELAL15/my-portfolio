@@ -1,6 +1,7 @@
 
 $bg_color: #1a222c;
 $main_color: #1a222c;
+$card_hover:  #474458;
 $primary_color: #54516a;
 $white: white;
 $center: center;
@@ -152,8 +153,14 @@ section{
 .sec-title{
   color: $main_color;
   text-align: $center;
+  h2{
+    font-size: 3rem;
+    margin-bottom: .7rem;
+  }
   p{
     color: $primary_color;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 }
 .card{
@@ -163,6 +170,14 @@ section{
   text-align: $center;
   color: $main_color;
   height: 100%;
+  transition: .3s ease-in-out;
+  &:hover{
+    background-color: $card_hover;
+    color: $white;
+    .card-header{
+      border-color: $white;
+    }
+  }
   .card-header{
     background-color: transparent;
   }
@@ -250,12 +265,12 @@ header{
       @extend .flex;
       justify-content: center !important;
       gap: .5rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 1.5rem;
       a{
         @extend .primary-btn;
         @extend .flex;
-        padding: 1rem !important;
+        padding: .8rem !important;
         justify-content: center !important;
         border-radius: 50% !important;
       }
@@ -295,7 +310,7 @@ header{
     font-size: 3rem;
     color: $white;
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     -webkit-animation: bounceAnimation 1s infinite alternate ease-in-out;
@@ -314,13 +329,36 @@ header{
   .project{
     margin: 2.5rem 0;
     .row{
-      .col-md-4{
+      .col-img{
         order: 1 !important;
+        .project_img{
+          border-radius: 25px;
+          overflow: hidden;
+          img{
+            -o-object-fit: cover;
+               object-fit: cover;
+            background-size: cover;
+          }
+        }
       }
-      .col-md-8{
+      .col-text{
         order: 2 !important;
+        text-align: end;
+        padding: 0 2rem;
         .details{
-          text-align: end;
+          .about{
+            margin-bottom: 1rem;
+            .name{
+              font-size: 2rem;
+              font-weight: bold;
+              margin-bottom: .5rem;
+              color: $main_color;
+            }
+            .desc{
+              color: $primary_color;
+              font-size: 1.2rem;
+            }
+          }
         }
       }
     }
@@ -349,6 +387,17 @@ footer{
 
 /*==============================================================*/
 @media (max-width: 768px){
+
+  .sec-title{
+    h2{
+      font-size: 2.5rem !important;
+    }
+    p{
+      font-size: 1rem !important;
+      font-weight: 400 !important;
+    }
+  }
+
   footer{
     .content{
       flex-direction: column;
@@ -362,6 +411,17 @@ footer{
     }
     p{
       font-size: 1.3rem !important;
+    }
+  }
+
+  .projects_container{
+    .project{
+      .row{
+        .col-text{
+          text-align: center !important;
+          padding: 0 .5rem !important;
+        }
+      }
     }
   }
 }
